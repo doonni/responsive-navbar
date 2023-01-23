@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  body {
+    background: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: right;
+    min-height: 100vh;
+  }
+
+  .menu-btn {
+    display: block;
+  }   
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 10%;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 22%;
+    background-color: rgb(30, 90, 220);
+    min-width: 400%;
+    min-height: 200%; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    border-radius: 25px;
+    z-index: 1;
+    transition: transform .3s ease-in;
+}
+
+.menu-items {
+    text-align: center;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 3rem;
+}
+
+ul {
+    margin: 1%;
+    padding: 0;
+    list-style: none;
+    height: 5em;
+    display: flex;
+    width: 90%;
+}
+  
+li {
+    list-style: none;
+    transition: all ease-in-out .5s;
+    line-height: 170%;
+}
+
+li a {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: aliceblue;
+  }
+  
+  a:active {
+    text-decoration: underline;
+    color: aliceblue;
+  }
+
+.nav-desktop {
+  display: none;
+
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn{
+    display: none;
+  }
+
+.nav-desktop {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1; 
+  max-width: 100%;
+  max-height: 100%;  
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.2rem;
+}
+
+ul {
+  margin: 1%;
+  padding: 0;
+  list-style: none;
+  height: 5em;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+li {
+  list-style: none;
+  margin: 3rem 2.50rem;
+  transition: all ease-in-out .5s;
+}
+
+li a {
+  text-align: center;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:visited {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: aliceblue;
+}
+
+a:active {
+  text-decoration: underline;
+  color: aliceblue;
+}
+
+}
+
+h1 {
+  color: aliceblue;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  line-height: 0.9;
+  font-size: 3rem;
+}
+
+p {
+  color: black;
+  letter-spacing: 1px;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: bold;
+  line-height: 0.9;
+  font-size: 2rem;
+}
+
+div.a {
+  margin-top: 30%;
+  margin: 40%;
+}
+
+div.b {
+  justify-content: flex-start;
+  margin: 30%;
+  margin-left: 40%;
+  margin-top: 35%;
+}
+
+#box1 {
+  background: aliceblue;
+  margin: 50%;
+  margin-top: 30%;
+  background-repeat: no-repeat, repeat;
+  padding: 15px;
+}
